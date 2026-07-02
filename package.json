@@ -1,0 +1,41 @@
+{
+  "name": "projetofinal",
+  "version": "0.0.0",
+  "private": true,
+  "description": "projeto-disciplina",
+  "type": "module",
+  "scripts": {
+    "dev": "concurrently -n web,api -c blue,green \"pnpm dev:web\" \"pnpm dev:api\"",
+    "dev:web": "http-server frontend -p 5173 -c-1 -o src/pages/home/index.html",
+    "dev:api": "cd backend && uv run uvicorn src.main:app --port 3000 --reload",
+    "build": "echo 'No build step needed for vanilla frontend'",
+    "lint": "oxlint frontend",
+    "lint:fix": "oxlint --fix frontend",
+    "format": "oxfmt frontend",
+    "test": "cd backend && uv run pytest",
+    "test:api": "cd backend && uv run pytest",
+    "lint:api": "cd backend && uv run ruff check .",
+    "prepare": "husky"
+  },
+  "devDependencies": {
+    "concurrently": "^10.0.3",
+    "http-server": "^14.1.1",
+    "husky": "^9.1.7",
+    "lint-staged": "^17.0.8",
+    "oxfmt": "^0.55.0",
+    "oxlint": "^1.70.0"
+  },
+  "lint-staged": {
+    "*.{js,mjs,cjs,ts,tsx}": [
+      "oxlint --fix",
+      "oxfmt"
+    ],
+    "*.{json,jsonc,css,html,md}": [
+      "oxfmt"
+    ],
+    "backend/**/*.py": [
+      "uv run --directory backend ruff check --fix",
+      "uv run --directory backend ruff format"
+    ]
+  }
+}

@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Entrar</title>
+
+    <link rel="stylesheet" href="../../styles/variables.css" />
+    <link rel="stylesheet" href="../../styles/global.css" />
+    <link rel="stylesheet" href="../../styles/layout.css" />
+    <link rel="stylesheet" href="../../components/header/header.css" />
+    <link rel="stylesheet" href="../../components/footer/footer.css" />
+    <link rel="stylesheet" href="./login.css" />
+  </head>
+
+  <body>
+    <div id="app-header"></div>
+    <main class="login">
+      <section class="login__card">
+        <h1 class="login__title">Entrar</h1>
+        <p class="login__subtitle">Acesse sua conta para gerenciar reservas e histórico.</p>
+
+        <form id="loginForm" novalidate>
+          <label
+            >Email
+            <input type="email" name="email" autocomplete="email" required />
+          </label>
+
+          <label style="margin-top: 16px"
+            >Senha
+            <input type="password" name="password" autocomplete="current-password" required />
+          </label>
+
+          <button
+            type="submit"
+            class="hero__cta"
+            id="loginBtn"
+            style="margin-top: 24px; width: 100%"
+          >
+            Entrar
+          </button>
+
+          <div class="feedback" id="feedback" aria-live="polite"></div>
+        </form>
+
+        <p class="login__alt">
+          Ainda não tem conta?
+          <a href="../cadastro/index.html">Cadastre-se</a>
+        </p>
+      </section>
+    </main>
+    <div id="app-footer"></div>
+    <script type="module" src="login.js"></script>
+  </body>
+</html>

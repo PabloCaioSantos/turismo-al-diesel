@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Detalhes do passeio | Projeto Turismo do Al-Diesel</title>
+    <meta
+      name="description"
+      content="Veja fotos, avaliações, localização no mapa, condições de pagamento e recomendações deste passeio no Projeto Turismo do Al-Diesel."
+    />
+    <link rel="stylesheet" href="../../styles/variables.css" />
+    <link rel="stylesheet" href="../../styles/global.css" />
+    <link rel="stylesheet" href="../../styles/layout.css" />
+    <link rel="stylesheet" href="../../components/header/header.css" />
+    <link rel="stylesheet" href="../../components/footer/footer.css" />
+    <link rel="stylesheet" href="../../components/card-passeio/card-passeio.css" />
+    <link rel="stylesheet" href="./detalhe.css" />
+  </head>
+  <body>
+    <div id="app-header"></div>
+    <main id="main-content">
+      <div class="detalhe-breadcrumb container" aria-label="Navegação estrutural">
+        <nav id="breadcrumb">
+          <a href="/src/pages/home/index.html">Início</a>
+        </nav>
+      </div>
+
+      <div class="container detalhe" id="detalhe-root" aria-live="polite">
+        <p class="detalhe-loading">Carregando passeio…</p>
+      </div>
+    </main>
+    <div id="app-footer"></div>
+    <script type="module" src="./detalhe.js"></script>
+  </body>
+</html>

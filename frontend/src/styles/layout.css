@@ -1,0 +1,126 @@
+@import "./variables.css";
+
+.container {
+  width: 100%;
+  max-width: var(--container-max);
+  margin-inline: auto;
+  padding-inline: var(--container-px);
+}
+
+.section {
+  padding-block: var(--space-2xl);
+}
+
+.section--alt {
+  background-color: var(--color-surface-2);
+}
+
+.section__header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--space-md);
+  margin-bottom: var(--space-xl);
+  flex-wrap: wrap;
+}
+
+.section__title {
+  font-size: var(--text-2xl);
+  font-weight: var(--weight-bold);
+  color: var(--color-text);
+  position: relative;
+  padding-bottom: var(--space-sm);
+}
+
+.section__title::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 3rem;
+  height: 3px;
+  background-color: var(--color-primary);
+  border-radius: var(--radius-full);
+}
+
+.section__subtitle {
+  color: var(--color-text-muted);
+  font-size: var(--text-lg);
+  margin-top: var(--space-xs);
+}
+
+.grid-cards {
+  display: grid;
+  gap: var(--space-lg);
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 600px) {
+  .grid-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 960px) {
+  .grid-cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.grid-cards--2 {
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 600px) {
+  .grid-cards--2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.hero {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(
+    135deg,
+    var(--color-primary-dark) 0%,
+    var(--color-primary) 60%,
+    #3fa6c8 100%
+  );
+  color: var(--color-text-on-primary);
+  padding-block: var(--space-3xl);
+  text-align: center;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="44" height="44"><circle cx="6" cy="6" r="2.2" fill="%23ffffff"/></svg>')
+    repeat;
+  opacity: 0.06;
+  pointer-events: none;
+}
+
+.hero__content {
+  position: relative;
+  max-width: 700px;
+  margin-inline: auto;
+  padding-inline: var(--container-px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-lg);
+}
+
+.hero__title {
+  font-size: clamp(var(--text-2xl), 5vw, var(--text-4xl));
+  font-weight: var(--weight-bold);
+  color: inherit;
+  line-height: 1.15;
+}
+
+.hero__subtitle {
+  font-size: var(--text-lg);
+  color: rgba(255, 255, 255, 0.85);
+  max-width: 520px;
+}

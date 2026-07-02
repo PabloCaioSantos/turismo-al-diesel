@@ -1,0 +1,22 @@
+@import "../../styles/variables.css";
+
+.hero__cta {
+  font-size: var(--text-base);
+  padding: var(--space-md) var(--space-2xl);
+  border-radius: var(--radius-full);
+  font-weight: var(--weight-bold);
+}
+
+.home-populares {
+  border-radius: var(--radius-lg);
+  margin-block: var(--space-md);
+  padding-inline: var(--space-xl);
+}
+
+@media (max-width: 599px) {
+  .home-populares {
+    margin-inline: calc(-1 * var(--container-px));
+    border-radius: 0;
+    padding-inline: var(--container-px);
+  }
+}

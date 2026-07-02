@@ -1,0 +1,38 @@
+# deps
+node_modules/
+
+# python
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.ruff_cache/
+*.egg-info/
+
+# build output
+dist/
+.vite/
+
+# database
+*.db
+*.sqlite
+*.sqlite3
+
+# env
+.env
+.env.*
+
+# test
+coverage/
+
+# editor / os
+.idea/
+.vscode/
+.DS_Store
+
+# logs
+*.log
+npm-debug.log*
+
+# mise local override (machine-specific)
+.mise.local.toml

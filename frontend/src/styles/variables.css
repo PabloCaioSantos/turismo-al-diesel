@@ -1,0 +1,67 @@
+:root {
+  --color-primary: #138eac;
+  --color-primary-light: #2db1d3;
+  --color-primary-dark: #0c5d71;
+
+  --color-accent: #f9a406;
+  --color-accent-dark: #bc7b05;
+
+  --color-bg: #fafbfc;
+  --color-surface: #ffffff;
+  --color-surface-2: #f2f5f8;
+  --color-border: #dce2e7;
+
+  --color-text: #222b39;
+  --color-text-muted: #6c7a90;
+  --color-text-on-primary: #ffffff;
+
+  --color-danger: #e02323;
+  --color-success: #28af5a;
+
+  --font-body: "Inter", "Segoe UI", system-ui, sans-serif;
+  --font-heading: "Inter", "Segoe UI", system-ui, sans-serif;
+
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.25rem;
+  --text-2xl: 1.5rem;
+  --text-3xl: 1.875rem;
+  --text-4xl: 2.25rem;
+
+  --weight-normal: 400;
+  --weight-medium: 500;
+  --weight-semibold: 600;
+  --weight-bold: 700;
+
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --space-2xl: 3rem;
+  --space-3xl: 4rem;
+
+  --radius-sm: 0.375rem;
+  --radius-md: 0.625rem;
+  --radius-lg: 1rem;
+  --radius-full: 9999px;
+
+  --shadow-sm: 0 1px 3px rgba(34, 43, 57, 0.08), 0 1px 2px rgba(34, 43, 57, 0.05);
+  --shadow-md: 0 4px 12px rgba(34, 43, 57, 0.1), 0 2px 6px rgba(34, 43, 57, 0.06);
+  --shadow-lg: 0 10px 30px rgba(34, 43, 57, 0.12), 0 4px 12px rgba(34, 43, 57, 0.08);
+
+  --transition-fast: 150ms ease;
+  --transition-base: 250ms ease;
+  --transition-slow: 400ms ease;
+
+  --bp-sm: 600px;
+  --bp-md: 768px;
+  --bp-lg: 1024px;
+  --bp-xl: 1280px;
+
+  --container-max: 1200px;
+  --container-px: var(--space-lg);
+  --header-height: 4rem;
+}

@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Cadastro</title>
+
+    <link rel="stylesheet" href="../../styles/variables.css" />
+    <link rel="stylesheet" href="../../styles/global.css" />
+    <link rel="stylesheet" href="../../styles/layout.css" />
+    <link rel="stylesheet" href="../../components/header/header.css" />
+    <link rel="stylesheet" href="../../components/footer/footer.css" />
+    <link rel="stylesheet" href="../../components/card-categoria/card-categoria.css" />
+    <link rel="stylesheet" href="../../components/card-passeio/card-passeio.css" />
+    <link rel="stylesheet" href="./cadastro.css" />
+  </head>
+
+  <body>
+    <div id="app-header"></div>
+    <main class="cadastro">
+      <section class="cadastro__card">
+        <h1 class="cadastro__title">Criar conta</h1>
+        <p class="cadastro__subtitle">Preencha os dados abaixo em 3 etapas.</p>
+
+        <div class="steps" aria-label="Etapas do cadastro">
+          <div class="steps__item is-active" data-step-indicator="1">1. Dados</div>
+          <div class="steps__item" data-step-indicator="2">2. Acesso</div>
+          <div class="steps__item" data-step-indicator="3">3. CPF</div>
+        </div>
+
+        <form id="cadastroForm" novalidate>
+          <section class="step is-active" data-step="1">
+            <div class="grid grid--two">
+              <label
+                >Nome de usuário
+                <input type="text" name="username" autocomplete="username" required
+              /></label>
+              <label
+                >Nome completo <input type="text" name="fullname" autocomplete="name" required
+              /></label>
+            </div>
+          </section>
+
+          <section class="step" data-step="2">
+            <div class="grid grid--two">
+              <label>Email <input type="email" name="email" autocomplete="email" required /></label>
+              <label class="password-field"
+                >Senha
+                <input
+                  type="password"
+                  name="password"
+                  autocomplete="new-password"
+                  minlength="8"
+                  required
+                />
+
+                <ul class="password-checks" aria-live="polite">
+                  <li data-rule="length">Mínimo de 8 caracteres</li>
+                  <li data-rule="uppercase">Pelo menos uma letra maiúscula</li>
+                  <li data-rule="lowercase">Pelo menos uma letra minúscula</li>
+                  <li data-rule="number">Pelo menos um número</li>
+                  <li data-rule="special">Pelo menos um caractere especial</li>
+                  <li data-rule="sequence">Sem sequências numéricas</li>
+                </ul>
+              </label>
+            </div>
+
+            <div style="margin-top: 16px">
+              <label
+                >Confirmar senha
+                <input
+                  type="password"
+                  name="confirmPassword"
+                  autocomplete="new-password"
+                  minlength="6"
+                  required
+              /></label>
+            </div>
+          </section>
+
+          <section class="step" data-step="3">
+            <div class="grid grid--two">
+              <label
+                >CPF
+                <input
+                  type="text"
+                  name="cpf"
+                  inputmode="numeric"
+                  placeholder="000.000.000-00"
+                  maxlength="14"
+                  required
+              /></label>
+            </div>
+          </section>
+
+          <div class="actions">
+            <button type="button" class="btn btn--ghost" id="prevBtn">Voltar</button>
+            <button type="button" class="hero__cta" id="nextBtn">Continuar</button>
+            <button type="submit" class="hero__cta" id="submitBtn" hidden>
+              Finalizar cadastro
+            </button>
+          </div>
+
+          <div class="feedback" id="feedback" aria-live="polite"></div>
+        </form>
+      </section>
+    </main>
+    <div id="app-footer"></div>
+    <script type="module" src="cadastro.js"></script>
+  </body>
+</html>

@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Minha conta</title>
+
+    <link rel="stylesheet" href="../../styles/variables.css" />
+    <link rel="stylesheet" href="../../styles/global.css" />
+    <link rel="stylesheet" href="../../styles/layout.css" />
+    <link rel="stylesheet" href="../../components/header/header.css" />
+    <link rel="stylesheet" href="../../components/footer/footer.css" />
+    <link rel="stylesheet" href="../login/login.css" />
+    <link rel="stylesheet" href="./minha-conta.css" />
+  </head>
+
+  <body>
+    <div id="app-header"></div>
+    <main class="login">
+      <section class="login__card" style="width: min(100%, 560px)">
+        <h1 class="login__title">Minha conta</h1>
+        <p class="login__subtitle">Altere os dados informados no cadastro.</p>
+
+        <form id="contaForm" novalidate>
+          <div class="conta-foto">
+            <span class="conta-foto__preview" id="fotoPreview" aria-hidden="true"></span>
+            <div class="conta-foto__acoes">
+              <label class="conta-foto__botao">
+                Escolher foto
+                <input type="file" id="fotoInput" name="foto" accept="image/*" hidden />
+              </label>
+              <button type="button" class="conta-foto__remover" id="fotoRemover" hidden>
+                Remover foto
+              </button>
+              <small class="conta-foto__dica">JPG ou PNG, até 2&nbsp;MB.</small>
+            </div>
+          </div>
+
+          <label
+            >Nome de usuário
+            <input type="text" name="username" autocomplete="username" required />
+          </label>
+
+          <label style="margin-top: 16px"
+            >Nome completo
+            <input type="text" name="fullname" autocomplete="name" required />
+          </label>
+
+          <label style="margin-top: 16px"
+            >Email
+            <input type="email" name="email" autocomplete="email" required />
+          </label>
+
+          <label style="margin-top: 16px"
+            >CPF
+            <input
+              type="text"
+              name="cpf"
+              inputmode="numeric"
+              placeholder="000.000.000-00"
+              maxlength="14"
+              required
+            />
+          </label>
+
+          <label style="margin-top: 16px"
+            >Nova senha
+            <small style="font-weight: 400; color: #6b7280"
+              >(deixe em branco para manter a atual)</small
+            >
+            <input type="password" name="password" autocomplete="new-password" />
+          </label>
+
+          <button type="submit" class="hero__cta" style="margin-top: 24px; width: 100%">
+            Salvar alterações
+          </button>
+
+          <div class="feedback" id="feedback" aria-live="polite"></div>
+        </form>
+      </section>
+    </main>
+    <div id="app-footer"></div>
+    <script type="module" src="minha-conta.js"></script>
+  </body>
+</html>

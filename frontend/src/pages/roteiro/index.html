@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Meu Roteiro | Projeto Turismo do Al-Diesel</title>
+    <meta name="description" content="Visualize e gerencie seus passeios reservados." />
+    <link rel="stylesheet" href="../../styles/variables.css" />
+    <link rel="stylesheet" href="../../styles/global.css" />
+    <link rel="stylesheet" href="../../styles/layout.css" />
+    <link rel="stylesheet" href="../../components/header/header.css" />
+    <link rel="stylesheet" href="../../components/footer/footer.css" />
+    <link rel="stylesheet" href="./roteiro.css" />
+  </head>
+  <body>
+    <div id="app-header"></div>
+    <main id="main-content">
+      <div class="container">
+        <section class="section roteiro-section" aria-labelledby="titulo-roteiro">
+          <div class="section__header">
+            <h1 id="titulo-roteiro" class="section__title">Meu Roteiro de Passeios</h1>
+            <p class="section__subtitle">Seus passeios selecionados e confirmados</p>
+          </div>
+
+          <div id="roteiro-container" class="roteiro-container"></div>
+        </section>
+      </div>
+    </main>
+    <div id="app-footer"></div>
+    <script type="module" src="./roteiro.js"></script>
+  </body>
+</html>

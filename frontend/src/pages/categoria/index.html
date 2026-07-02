@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Categoria | Projeto Turismo do Al-Diesel</title>
+    <meta
+      name="description"
+      content="Veja os passeios e destinos disponíveis nesta categoria do Projeto Turismo do Al-Diesel."
+    />
+    <link rel="stylesheet" href="../../styles/variables.css" />
+    <link rel="stylesheet" href="../../styles/global.css" />
+    <link rel="stylesheet" href="../../styles/layout.css" />
+    <link rel="stylesheet" href="../../components/header/header.css" />
+    <link rel="stylesheet" href="../../components/footer/footer.css" />
+    <link rel="stylesheet" href="../../components/card-passeio/card-passeio.css" />
+    <link rel="stylesheet" href="./categoria.css" />
+  </head>
+  <body>
+    <div id="app-header"></div>
+    <main id="main-content">
+      <div class="categoria-breadcrumb container" aria-label="Navegação estrutural">
+        <nav>
+          <a href="/src/pages/home/index.html">Início</a>
+          <span aria-hidden="true"> › </span>
+          <span id="breadcrumb-categoria">Categoria</span>
+        </nav>
+      </div>
+      <section class="categoria-hero" id="categoria-hero" aria-label="Banner da categoria">
+        <div class="categoria-hero__overlay" aria-hidden="true"></div>
+        <div class="categoria-hero__content container">
+          <span class="categoria-hero__emoji" id="hero-emoji" aria-hidden="true"></span>
+          <h1 class="categoria-hero__title" id="hero-title">Carregando…</h1>
+          <p class="categoria-hero__subtitle" id="hero-subtitle"></p>
+        </div>
+      </section>
+      <div class="container">
+        <section class="section" id="passeios-section" aria-labelledby="titulo-passeios">
+          <div class="section__header">
+            <div>
+              <h2 id="titulo-passeios" class="section__title">Passeios disponíveis</h2>
+              <p class="section__subtitle" id="passeios-count"></p>
+            </div>
+            <a href="/src/pages/home/index.html" class="btn btn--outline btn--sm"> ← Voltar </a>
+          </div>
+          <div id="grid-passeios" class="grid-cards" role="list"></div>
+        </section>
+      </div>
+    </main>
+    <div id="app-footer"></div>
+    <script type="module" src="./categoria.js"></script>
+  </body>
+</html>

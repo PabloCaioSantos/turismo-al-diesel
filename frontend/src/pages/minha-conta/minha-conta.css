@@ -1,0 +1,67 @@
+@import "../../styles/variables.css";
+
+.conta-foto {
+  display: flex;
+  align-items: center;
+  gap: var(--space-lg);
+  margin-bottom: var(--space-lg);
+}
+
+.conta-foto__preview {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 72px;
+  height: 72px;
+  border-radius: var(--radius-full);
+  background: var(--color-primary);
+  color: var(--color-text-on-primary);
+  font-size: 1.4rem;
+  font-weight: var(--weight-bold);
+  overflow: hidden;
+}
+
+.conta-foto__preview--img {
+  background: none;
+}
+
+.conta-foto__preview img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.conta-foto__acoes {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 6px;
+}
+
+.conta-foto__botao {
+  display: inline-block;
+  padding: 8px 16px;
+  border-radius: 999px;
+  background: #4338ca;
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.conta-foto__remover {
+  border: 0;
+  background: none;
+  padding: 0;
+  color: #b91c1c;
+  font: inherit;
+  font-size: 0.85rem;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.conta-foto__dica {
+  color: #6b7280;
+  font-size: 0.8rem;
+}
